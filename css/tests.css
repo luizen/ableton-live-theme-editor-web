@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.al-mixer-gain-control {
+    float: left;
+    width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-right: 40px solid red;
+    border-bottom: 20px solid transparent;
+    position: relative;
+    margin: 10px;
+}
+
+.al-mixer-gain-control > div {
+    width: 0;
+	height: 0;
+	border-top: 12px solid transparent;
+	border-right: 24px solid green;
+    border-bottom: 12px solid transparent;
+    position: absolute;
+    top: -12px;
+    left: 12px;
+}

@@ -1,0 +1,191 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/ui-elements.css">
+    <link rel="stylesheet" href="css/live.css">
+    <script type="text/javascript" src="js/vendor/nob/nob.js"></script>
+    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div id="main-container" class="container">
+        <div id="al-app-window" class="container">
+
+            <div id="top-container" class="container">
+                <div id="al-global-tempo-container" class="container">
+                    TAP | BPM
+                </div>
+                <div id="al-global-transport-container" class="container">
+                    STOP | PLAY
+                </div>
+                <div id="al-global-keymidi-container" class="container">
+                    KEYS | MIDI
+                </div>
+            </div>
+
+            <div id="middle-container" class="container">
+
+                <div id="al-browser-container" class="container">
+                    <!-- <div id="al-browser-top-container" class="container">
+                            <div id="al-browser-toggle"> >> </div>
+                            <div id="al-browser-search-bar">Search ...</div>
+                        </div> -->
+                    <div id="al-browser-middle-container" class="container">
+                        <div id="al-browser-leftpanel-container" class="container">
+                            <div id="al-browser-collections-container" class="container">
+                                <strong>Collections</strong>
+                                <br> Favorites
+                                <br> Kicks
+                                <br>
+                            </div>
+                            <div id="al-browser-categories-container" class="container">
+                                <strong>Categories</strong>
+                                <br> Sounds
+                                <br> Drums
+                                <br> Instruments
+                                <br> Audio Effects
+                                <br> MIDI Effects
+                                <br> Max For Live
+                                <br> Plug-ins
+                                <br> Clips
+                                <br> Samples
+                                <br>
+                            </div>
+                            <div id="al-browser-places-container" class="container">
+                                <strong>Places</strong>
+                                <br> Packs
+                                <br> User Library
+                                <br> Current Project
+                                <br> Add Folder...
+                                <br>
+                            </div>
+                        </div>
+                        <div id="al-browser-rightpanel-container" class="container">
+                            <div id="al-browser-contents-container" class="container">
+                                <strong>Name</strong>
+                                <br> Amp
+                                <br> Auto Filter
+                                <br> Auto Pan
+                                <br> Cabinet
+                                <br> ...
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div id="al-browser-bottom-container" class="container">
+                            <div id="al-browser-previewbar">Preview...</div>
+                            <div id="al-browser-groovepoll-toggle"><<</div>
+                        </div> -->
+                </div>
+
+                <div id="al-arrangement-session-views-container" class="container">
+                    <div id="al-arrangement-view-container" class="hidden container"></div>
+                    <div id="al-session-view-container" class="container">
+                        <div id="al-channels-container" class="container">
+                            <div id="channel1" class="al-channel"></div>
+                            <div id="channel2" class="al-channel"></div>
+                            <div id="channel3" class="al-channel last-channel"></div>
+                        </div>
+                        <div id="al-returns-container" class="container">
+                            <div class="al-channel al-return" id="channel4"></div>
+                            <div class="al-channel al-return" id="channel5"></div>
+                        </div>
+                        <div id="al-master-channel-container" class="container">
+                            <div class="al-channel al-master" id="channel6"></div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div id="bottom-container" class="container">
+                <div id="al-help-container" class="container">
+                    <div id="al-help-titlebar">Help</div>
+                    <div id="al-help-contents"></div>
+                </div>
+                <div id="al-devices-clipeditor-container" class="container">
+                    <div id="al-devices-container" class="container">
+                        <dir id="device1" class="al-device"></dir>
+                        <dir id="device2" class="al-device"></dir>
+                        <dir id="device3" class="al-device"></dir>
+                    </div>
+                    <div id="al-clipeditor-container" class="hidden container"></div>
+                </div>
+            </div>
+
+            <div id="footer-container" class="container">
+                <div id="al-help-toggler"></div>
+                <div id="al-alertbar"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="skin-controls">
+        <div>
+            <div>
+                <label>Base Color</label>
+            </div>
+            <div>
+                <input type="color" data-style-name="--default-backgd-color" data-setting-type="color" value="#cccccc">
+            </div>
+            <div>
+                <input type="range" data-style-name="--default-backgd-color" data-setting-type="opacity" data-initial-value="#cccccc" oninput="defaultBgOpacityOutput.value = this.value">
+                <output id="defaultBgOpacityOutput" class="range-output">100</output>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label>Clip instance Color</label>
+            </div>
+            <div>
+                <input type="color" data-style-name="--clip-instance" data-setting-type="color" value="#ff7f50">
+            </div>
+            <div>
+                <input type="range" data-style-name="--clip-instance" data-setting-type="opacity" data-initial-value="#ff7f50" oninput="clipInstanceBgOpacityOutput.value = this.value">
+                <output id="clipInstanceBgOpacityOutput" class="range-output">100</output>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label>Meter background</label>
+            </div>
+            <div>
+                <input type="color" data-style-name="--meter-background" data-setting-type="color" value="#adff2f">
+            </div>
+            <div>
+                <input type="range" data-style-name="--meter-background" data-setting-type="opacity" data-initial-value="#adff2f" oninput="meterBgOpacityOutput.value = this.value">
+                <output id="meterBgOpacityOutput" class="range-output">100</output>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            liveSkinEditor.init();
+        });
+    </script>
+
+</body>
+
+</html>

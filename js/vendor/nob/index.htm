@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style type="text/css">
+
+html,
+body {
+	background: #EEE;
+	height: 100%;
+	font: 13px Arial;
+	color: #888;
+}
+.cp {
+	background: #EEE;
+	position: relative;
+	top: 210px;
+	left: 350px;
+	width: 280px;
+	text-align: center;
+	padding: 25px 0px 20px 0px;
+	
+	border: #DDD 1px solid;
+	border-radius: 11px;
+	box-shadow: 0px 1px 3px #BBB,
+				inset 0px 1px 0px #FFF,
+				0px 1px 0px #999;
+}
+canvas {
+	margin: 0px 10px 0px 10px;
+}
+
+</style>
+<script type="text/javascript">
+
+function test(val) {
+	console.log(val);
+}
+
+</script>
+</head>
+<body>
+
+<div class="cp">
+	<canvas width="140" class="nob" data-value="0" data-change="test();"></canvas>
+</div>
+
+<div class="cp">
+	<canvas width="40" class="nob" data-value="0"></canvas>
+	<canvas width="40" class="nob" data-value="81"></canvas>
+	<canvas width="40" class="nob" data-value="42"></canvas>
+	<canvas width="40" class="nob" data-value="100"></canvas>
+</div>
+
+<script type="text/javascript" src="nob.js"></script>
+
+</body>
+</html>

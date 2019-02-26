@@ -1,0 +1,569 @@
+/* #region ---------------------- MAIN, APP WINDOW ---------------------- */
+.container {
+    display: flex;
+    /* border: 1px solid black; */
+    min-width: 20px;
+    min-height: 20px;
+}
+
+#main-container
+{
+    /* position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0; */
+    padding: 12px;
+    /* border: 5px solid magenta; */
+    border: var(--default-border);
+    margin: 0;
+    display: flex;
+    background-color: var(--default-desktop-color);
+}
+
+#al-app-window {
+    width: 100%;
+    /* padding: 10px; */
+    border: 1px solid;
+    display: table;
+}
+/* #endregion */
+
+/* #region ---------------------- TOP, MIDDLE and BOTTOM CONTAINERS ----------------------  */
+#top-container, #middle-container, #bottom-container {
+    min-height: 20px;
+    /* display: table-row; */
+    display: flex;
+    /* border: 2px solid red; */
+}
+/* #endregion  */
+
+/* #region ---------------------- TOP CONTAINER CONTENTS ---------------------- */
+#al-global-tempo-container {
+    width: 20%;
+    background-color: var(--default-backgd-color);
+    /* border: 1px solid green; */
+    border: var(--default-border);
+    
+}
+#al-global-transport-container {
+    flex-grow: 1;
+    background-color: var(--default-backgd-color);
+    /* border: 1px solid green; */
+    border: var(--default-border);
+}
+#al-global-keymidi-container {
+    width: 20%;
+    /* border: 1px solid green; */
+    border: var(--default-border);
+    background-color: var(--default-backgd-color);
+}
+/*#endregion */
+
+/* #region ---------------------- MIDDLE CONTAINER CONTENTS ---------------------- */
+#al-arrangement-session-views-container {
+    width: 80%;
+    /* border: 2px solid blue; */
+    background-color: var(--default-surceface-bg-color);
+    padding: 5px;
+}
+
+#al-session-view-container, #al-arrangement-view-container {
+    width: 100%;
+}
+
+#al-browser-container {
+    float: left;
+    width: 20%;
+    background-color: var(--default-backgd-color);
+    /* border: 4px solid rebeccapurple; */
+    border: var(--default-border);
+    padding: 5px;
+}
+
+#al-channels-container {
+    background-color: var(--default-surceface-bg-color);
+    width: 70%;
+    float: left;    
+    /* border: 1px solid blue; */
+}
+
+#al-returns-container {    
+    background-color: var(--default-backgd-color);
+    width: 20%;
+    float: left;
+    /* border: 1px solid blue; */
+    border: var(--default-border);
+}
+
+#al-master-channel-container{    
+    background-color: var(--default-backgd-color);
+    width: 10%;
+    float: left;
+    /* border: 1px solid blue; */
+    border: var(--default-border);
+}
+
+/*#region BROWSER */
+#al-browser-top-container, #al-browser-middle-container, #al-browser-bottom-container {
+    height: 10%;
+    float: none;
+    display: block;
+    clear: both;
+    /* border: 2px solid red; */
+}
+
+.al-browser-middle-container {
+    min-height: 80%;
+    height: 80%;
+    /* display: block;
+    overflow: auto;
+    clear: both; */
+}
+
+.al-browser-previewbar {
+    height: 20px;
+}
+
+/* .al-browser-groovepoll-toggle {
+
+} */
+
+.al-browser-toggle {
+    width: 20%;
+    float: left;
+}
+
+.al-browser-search-bar {
+    width: 80%;
+    float: left;
+}
+
+#al-browser-leftpanel-container, #al-browser-rightpanel-container {
+    float: left;
+    display: table;
+    border: var(--default-border);
+    /* clear: both; */
+    /* height: 100%;  */
+}
+
+#al-browser-collections-container , #al-browser-categories-container, #al-browser-places-container, #al-browser-contents-container {
+    float: none;
+    display: block;
+    margin-bottom: 10px;
+}
+/*#endregion */
+
+/*#region CHANNELS */
+.al-channel {
+    background-color: var(--default-backgd-color);
+    width: 80px;
+    float: left;
+    margin: 0;
+    /* padding: 5px; */
+    padding: 0;
+}
+
+.al-channel-name {
+    background-color: #b3d4fc;
+    border: var(--default-border);
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    vertical-align: center;
+    height: var(--default-height);
+    padding-top: 1px;
+    font-weight: bold;
+}
+
+.al-channel-clips {
+    margin: 0;
+    padding: 0;
+}
+
+.al-clip-cell, .al-channel-hor-strip {
+    padding: 1px;
+    margin: 0;
+    border: var(--default-border);
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    vertical-align: center;
+}
+
+.al-clip-cell, .al-channel-stop-controls
+{
+    height: var(--default-height);
+}
+
+.al-clip-instance {
+    background-color: var(--clip-instance);
+    border: 0;
+    height: 100%;
+}
+
+.al-clip-transport{
+    float: left;
+}
+
+.al-clip-name {
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 25px;
+    padding-top: 1px;
+}
+
+.al-clip-playbutton, .al-clip-stopbutton {
+    padding: 4px;
+    margin: 0;
+}
+
+.al-clip-playbutton {
+    background-color: var(--clip-instance);
+    color: greenyellow;
+    border-right: var(--default-border);
+}
+
+.al-channel-stop-controls {
+    margin: 0;
+    padding: 0;
+    border: var(--default-border);
+    background-color: var(--default-backgd-color);
+}
+
+.al-clip-stopbutton {
+    background-color: var(--default-backgd-color);
+    color: grey;
+}
+
+.al-channel-empty-space {
+    height: 60px;
+    border: var(--default-border);
+}
+
+.al-channel-sends {
+    margin: 0;
+    height: 50px;
+    border: var(--default-border);
+    background-color: var(--default-backgd-color);
+    padding: 0;
+}
+
+.al-channel-mixer {
+    height: 170px;
+    border: var(--default-border);
+}
+
+.al-mixer-left-container {
+    float: left;
+    border: var(--default-border);
+}
+
+.al-channel-peak-indicator {
+    width: 35px;
+    height: 15px;
+    border: var(--default-border);
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 5px;
+    background-color: var(--control-constrast-frame);
+}
+
+.al-channel-volume-input {
+    width: 35px;
+    height: 15px;
+    border: var(--default-border);
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 5px;
+    color: var(--control-foreground);
+}
+
+.al-channel-volume-input > * {
+    width: 80%;
+    text-align: center;
+    align-content: center;
+    background-color: var(--control-constrast-frame);
+}
+
+.al-mixer-right-container {
+    float: left;
+    border: var(--default-border);
+}
+
+.al-channel-mute-control {
+    width: 30px;
+    height: 30px;
+    color: black;
+    border: var(--default-border);
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.al-control-on {
+    background-color: var(--control-on);
+    cursor: pointer;
+}
+
+.al-channel-solo-control {
+    width: 30px;
+    height: 15px;
+    color: black;
+    border: var(--default-border);
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.al-channel-arm-control {
+    width: 30px;
+    height: 15px;
+    color: black;
+    border: var(--default-border);
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 0.9em;
+    padding-top: 1px;
+
+}
+
+.al-mixer-volume-meter-container {
+    height: 157px;
+    width: 17px;
+    float: left;
+}
+
+/* .al-mixer-gain-control {
+    float: left;
+    width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-right: 40px solid red;
+	border-bottom: 20px solid transparent;
+} */
+
+.al-mixer-gain-control {
+    float: left;
+    width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+    border-right: 10px solid black;
+    border-bottom: 5px solid transparent;
+    position: relative;
+}
+
+.al-mixer-gain-control > div {
+    width: 0;
+	height: 0;
+	border-top: 3px solid transparent;
+    border-right: 6px solid;
+    border-right-color: var(--default-backgd-color);
+    border-bottom: 3px solid transparent;
+    position: absolute;
+    top: -3px;
+    left: 3px;
+}
+
+.al-mixer-volume-meter-left {
+    width: 35%;
+    height: 100%;
+    float: left;
+    background-color: var(--meter-background);
+    border: var(--default-border);
+}
+
+.al-mixer-volume-meter-right {
+    width: 35%;
+    height: 100%;
+    float: left;
+    background-color: var(--meter-background);
+    border: var(--default-border);
+}
+
+.al-mixer-gain-control {
+    float: left;
+}
+
+
+
+
+
+/*#endregion */
+
+/*#region KNOBS */
+.cp {
+    margin: 0;
+    padding: 0 0 0 3px;
+    border: 0;
+}
+
+.al-knob-send {
+    margin: 0;
+    padding: 3px;
+    border: 0;
+    width: 30px;
+    float: left;
+}
+
+.nob-sub {
+    padding-top: 20px;
+}
+
+.al-knob-pan {
+    margin: 0;
+    padding: 3px;
+    border: 0;
+    width: 30px;
+    float: none;
+}
+/*#endregion */
+
+/* #endregion */
+
+/* #region ---------------------- BOTTOM CONTAINER CONTENTS ----------------------  */
+#al-devices-container, #al-clipeditor-container, #al-help-container {
+    min-height: 80px;
+}
+
+#al-help-container {
+    border: var(--default-devices-border);
+    background-color: var(--default-backgd-color);
+    width: 15%;
+    height: 100%;
+    padding: 3px;
+    display: block;
+}
+
+#al-help-titlebar, .al-device-topbar {
+    background-color: var(--default-titlebar-color);
+    min-height: 20px;
+    background-color: var(--default-titlebar-color);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+#al-help-contents {
+    height: 100%;
+    width: 200px;
+}
+
+#al-devices-clipeditor-container {
+    width: 85%;
+}
+
+#al-devices-container {
+    border: var(--default-devices-border);
+    background-color: var(--default-backgd-color);
+    width: 100%;
+    padding: 3px;
+}
+
+#al-clipeditor-container {
+    width: 100%;
+    border: var(--default-border);
+    background-color: var(--default-backgd-color);
+}
+
+.al-device {
+    min-width: 250px;
+    /* width: 250px; */
+    border: var(--default-devices-border);
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.al-onoff-switch, .al-device-settings-button, .al-device-name {
+    float: left;
+    margin-left: 4px;    
+}
+
+.al-device-name {
+    margin-top: 1px;
+}
+
+.al-onoff-switch {
+    height: 12px;
+    width: 12px;
+    background-color: var(--control-on);
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.al-device-settings-button, .al-device-hotswap, .al-device-save {
+    height: 12px;
+    width: 12px;
+    background-color: var(--default-backgd-color);
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-top: 2px;
+}
+
+.al-device-settings-button .al-device-settings-button-arrowdown {
+    font-size: 9pt;
+    margin-top: -1px;
+    margin-left: 1px;
+}
+
+.al-device-hotswap, .al-device-save {
+    float: right;
+    margin-right: 3px;
+}
+
+.al-device-save i {
+    font-size: 7pt;
+    display: block;
+    margin-top: 1px;
+    margin-left: 2px;
+}
+
+.al-device-hotswap i {
+    font-size:6.9pt;
+    display: block;
+    margin-top: 1px;
+    margin-left: 1px;
+}
+
+.al-device-contents-container
+{
+    height: 160px;
+    padding: 5px;
+}
+
+/*#endregion */
+
+/* #region ---------------------- FOOTER CONTAINER CONTENTS ----------------------  */
+#footer-container {
+    border: var(--default-border);
+    background-color: var(--default-backgd-color);
+}
+
+/* #endregion */
+
+/* #region SKIN CONTROLS */
+#skin-controls {
+    display: table;
+    margin-top: 15px;
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 0.9em;
+}
+
+#skin-controls > div {
+    display: table-row;
+}
+
+#skin-controls > div > div {
+    display: table-cell;
+    padding: 4px;
+}
+
+.range-output {
+    width: 100px;
+    float: right;
+    margin-left: 5px;
+    padding-top: 2px;
+    color: rgba(0, 0, 0, 0.7);    
+}
+
+/* #endregion */

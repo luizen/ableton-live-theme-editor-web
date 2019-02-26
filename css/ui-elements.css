@@ -1,0 +1,15 @@
+:root {
+    --default-backgd-color: rgba(204, 204, 204, 1);
+    --default-border: 1px solid rgba(128, 128, 128, 1);
+    --default-devices-border: 2px solid rgba(128, 128, 128, 1);
+    --default-titlebar-color: rgba(180, 180, 180, 1);
+    --default-desktop-color: rgba(150, 150, 150, 1);
+    --default-surceface-bg-color: rgba(180, 180, 180, 1);
+    --default-surface-highlight: rgba(200, 200, 200, 1);
+    --clip-instance: rgba(255, 127, 80, 1);
+    --control-on: rgba(255, 215, 0, 1);
+    --control-foreground: rgba(0, 0, 0, 1);
+    --control-constrast-frame:  rgba(226, 223, 223, 0.871);
+    --meter-background: rgba(173, 255, 47, 1);
+
+}
