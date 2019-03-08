@@ -4,8 +4,8 @@ var liveSkinEditor = {
         //this.identifyContainers();
 
         // After all external elements are loaded, init the knobs
-        $(".al-channel").load("channel-strip.html", function () {
-            $(".al-device").load("device.html", function () {
+        $(".al-channel").load("components/channel-strip.html", function () {
+            $(".al-device").load("components/device.html", function () {
                 nob.init();
             });
         });
