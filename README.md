@@ -2,7 +2,7 @@
 
 ## What?
 
-    An open-source and free web editor for Ableton Live themes.
+An open-source and free web editor for Ableton Live themes.
 
 ## Objectives
 
