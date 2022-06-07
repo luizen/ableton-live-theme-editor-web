@@ -16,7 +16,7 @@ An open-source and free web editor for Ableton Live themes.
 
 ## Features
 
-Check the _Issues_ tab. 
+Check the _Issues_ tab.
 
 ## Live UI elements list
 
@@ -185,6 +185,6 @@ Below a list of UI elements that can be customized
 * WarperTimeBarRulerBackground
 * WaveformColor
 
-
 --------
-*Initial content created using [HTML5 Boilerplate](https://html5boilerplate.com)*
+
+* Initial content created using [HTML5 Boilerplate](https://html5boilerplate.com)
