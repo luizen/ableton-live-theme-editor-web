@@ -1,5 +1,11 @@
 # **Ableton Live** web theme editor
 
+## Discontinued
+
+This project is kind of discontinued since another similar tool (and website) is already available for the purpose, although not open-source: https://www.livethemes.co
+
+If anyone wants to continue this, please let me know ;)
+
 ## What?
 
 An open-source and free web editor for Ableton Live themes.
